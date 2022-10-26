@@ -22,3 +22,8 @@
 
 ### Iterator
 #### Percorrer array de orçamentos através de uma estrutura de dados complexa sem expor seus detalhes internos
+
+## Estruturais 
+
+### Adapter
+#### Envio de orçamentos com adaptações de HTTP
