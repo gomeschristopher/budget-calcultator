@@ -27,3 +27,6 @@
 
 ### Adapter
 #### Envio de orçamentos com adaptações de HTTP
+
+### Bridge
+#### Exportação de arquivos com classes separadas que podem ser desenvolvidas independentemente

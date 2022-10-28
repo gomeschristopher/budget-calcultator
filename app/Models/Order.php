@@ -4,7 +4,7 @@ namespace App\Models;
 
 class Order
 {
-    public string $clientName;
-    public \DateTimeInterface $dataFinished;
+    public string $client_name;
+    public \DateTimeInterface $date_finished;
     public Budget $budget;
 }
