@@ -4,9 +4,9 @@ namespace App\Services\Taxes;
 
 use App\Models\Budget;
 
-class TaxIss implements Tax
+class TaxIss extends Tax
 {
-    public function calculateTax(Budget $budget): float
+    public function makeSpecificCalc(Budget $budget): float
     {
         return $budget->value * 0.06;
     }

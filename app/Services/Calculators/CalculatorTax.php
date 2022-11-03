@@ -7,7 +7,7 @@ use App\Services\Taxes\Tax;
 
 class CalculatorTax
 {
-    public function calculateTax(Budget $budget, Tax $tax): float
+    public function calculateTax(Budget $budget, Tax $tax)
     {
         return $tax->calculateTax($budget);
     }

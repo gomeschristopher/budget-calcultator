@@ -30,3 +30,6 @@
 
 ### Bridge
 #### Exportação de arquivos com classes separadas que podem ser desenvolvidas independentemente
+
+### Decorator
+#### Inserção de multiplos impostos ao orçamento, colocando eles dentro de um envoltório
