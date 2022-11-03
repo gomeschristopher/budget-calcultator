@@ -2,18 +2,19 @@
 
 namespace App\Models;
 
+use App\Contracts\Budgetable;
 use App\Models\States\BudgetState;
 use App\Models\States\BudgetStateApproving;
 
-class Budget
+class Budget implements Budgetable
 {
-    public int $itemsQuantity;
-    public float $value;
+    private array $items;
     public BudgetState $state;
 
     public function __construct()
     {
         $this->state = new BudgetStateApproving();
+        $this->items = [];
     }
 
     public function applyExtraDiscount()
@@ -34,5 +35,19 @@ class Budget
     public function finish()
     {
         $this->state->finish($this);
+    }
+
+    public function addItem(Budgetable $item)
+    {
+        $this->items[] = $item;
+    }
+
+    public function value(): float
+    {
+        return array_reduce(
+            $this->items,
+            fn (float $sumValue, Budgetable $item) => $item->value() + $sumValue,
+            0
+        );
     }
 }

@@ -33,3 +33,6 @@
 
 ### Decorator
 #### Inserção de multiplos impostos ao orçamento, colocando eles dentro de um envoltório
+
+### Composite
+#### Inserindo orçamentos dentro de orçamentos como uma estrutura semelhante a uma árvore
