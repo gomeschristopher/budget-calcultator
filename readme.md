@@ -42,3 +42,6 @@
 
 ### Proxy
 #### Acessando dados do orçamento com um objeto substituto
+
+### Flyweight
+#### Usando mesmos dados do pedido compartilhando estados 
