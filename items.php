@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Budget;
+use App\Models\BudgetCacheProxy;
 use App\Models\BudgetItem;
 
 require 'vendor/autoload.php';
@@ -23,4 +24,7 @@ $budgetOld->addItem($budgetItem3);
 
 $budget->addItem($budgetOld);
 
-echo $budget->value();
+$budgetCacheProxy = new BudgetCacheProxy($budget);
+
+echo $budget->value() . PHP_EOL;
+echo $budget->value() . PHP_EOL;

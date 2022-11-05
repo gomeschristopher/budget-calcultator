@@ -38,4 +38,7 @@
 #### Inserindo orçamentos dentro de orçamentos como uma estrutura semelhante a uma árvore
 
 ### Facade
-#### Calculando desconto e log com uma interface simplificada
+#### Calculando desconto e gerando log com uma interface simplificada
+
+### Proxy
+#### Acessando dados do orçamento com um objeto substituto
