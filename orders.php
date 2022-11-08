@@ -1,18 +1,20 @@
 <?php
 
 use App\Models\Budget;
-use App\Models\OrderInfo;
-use App\Models\Order;
+use App\Services\OrderCreator;
 
 require 'vendor/autoload.php';
 
 $orders = [];
-$orderInfo = new OrderInfo(md5('a'), new \DateTimeImmutable());
+$orderCreator = new OrderCreator();
 
 for($i = 0; $i < 1000; $i++) {
-    $order = new Order();
-    $order->info = $orderInfo;
-    $order->budget = new Budget();
+    $budget = new Budget();
+    $order = $orderCreator->createOrder(
+        'Chris',
+        date('y-m-d'),
+        $budget
+    );
 
     $orders[] = $order;
 }
